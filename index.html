@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Angel Guerrero - Desarrollador full-stack</title>
+<meta name="description" content="Sistemas de gestion terminados para negocios pequenos, bots de pagos y automatizacion, y un juego propio en el navegador. Node, React, TypeScript, Python y Solana.">
+<link rel="canonical" href="https://angelguerrrwro-rgb.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Angel Guerrero - Desarrollador full-stack">
+<meta property="og:description" content="Sistemas terminados para negocios, y automatizacion que mueve dinero.">
+<meta property="og:url" content="https://angelguerrrwro-rgb.github.io/">
+<meta property="og:image" content="https://angelguerrrwro-rgb.github.io/sistemas/barberia.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%2314202a'/><text x='32' y='45' font-size='38' font-family='Arial,sans-serif' font-weight='700' fill='%23b35309' text-anchor='middle'>A</text></svg>">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=JetBrains+Mono:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Hoja de instrumentos: columna unica con regla izquierda; cada proyecto es una ficha tecnica. */
+:root{
+  --papel:#f2f5f6; --ficha:#ffffff; --tinta:#14202a; --apagado:#5a6b79;
+  --senal:#b35309; --linea:#d8e0e5; --ok:#1d6b4f; --alerta:#9a2f2f;
+  --display:"Chivo","Arial Narrow",Helvetica,sans-serif;
+  --cuerpo:"Source Sans 3",-apple-system,Segoe UI,sans-serif;
+  --dato:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --papel:#0e151b; --ficha:#161f27; --tinta:#e2eaf0; --apagado:#8ba0b1;
+  --senal:#ef9d4a; --linea:#243139; --ok:#4fbf92; --alerta:#e2766f; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --papel:#0e151b; --ficha:#161f27; --tinta:#e2eaf0; --apagado:#8ba0b1;
+  --senal:#ef9d4a; --linea:#243139; --ok:#4fbf92; --alerta:#e2766f; color-scheme:dark;}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--cuerpo);
+     font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.env{max-width:60rem;margin:0 auto;
+     padding-left:max(16px,env(safe-area-inset-left,0px));
+     padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+code{font-family:var(--dato);font-size:.88em}
+.eti{font-family:var(--dato);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--apagado)}
+
+header{padding-block:clamp(2.5rem,7vw,4.5rem) clamp(2rem,5vw,3rem);border-bottom:1px solid var(--linea)}
+h1{font-size:clamp(2.4rem,8vw,4rem);font-weight:900;letter-spacing:-.025em;margin-top:.6rem}
+.rol{font-family:var(--display);font-size:clamp(1rem,3vw,1.2rem);font-weight:700;color:var(--senal);margin-top:.5rem}
+.tesis{max-width:34rem;margin-top:1.4rem;font-size:clamp(1.05rem,2.6vw,1.22rem)}
+.meta{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin-top:1.6rem}
+
+section{padding-block:clamp(2.2rem,6vw,3.4rem);border-bottom:1px solid var(--linea)}
+.enc{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.8rem}
+.enc h2{font-size:clamp(1.3rem,4vw,1.75rem);font-weight:700;letter-spacing:-.015em}
+.enc .regla{flex:1;height:1px;background:var(--linea);min-width:0}
+
+.ficha{background:var(--ficha);border:1px solid var(--linea);border-left:3px solid var(--senal);
+       padding:clamp(1.1rem,3.5vw,1.8rem);margin-bottom:1.3rem}
+.ficha:last-child{margin-bottom:0}
+.ficha h3{font-size:clamp(1.1rem,3.2vw,1.35rem);font-weight:700}
+.resumen{color:var(--apagado);margin-top:.45rem}
+.pila{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.9rem}
+.pila span{font-family:var(--dato);font-size:.7rem;border:1px solid var(--linea);
+           padding:.2rem .5rem;color:var(--apagado)}
+.reglas{list-style:none;margin:1.2rem 0 0;padding:0;display:grid;gap:.65rem}
+.reglas li{display:grid;grid-template-columns:auto 1fr;gap:.7rem;align-items:start;font-size:.95rem;min-width:0}
+.marca{font-family:var(--dato);font-size:.7rem;font-weight:700;color:var(--ok);
+       border:1px solid currentColor;padding:.05rem .4rem;white-space:nowrap;margin-top:.18rem}
+.marca.no{color:var(--alerta)}
+.cifra{margin-top:1.2rem;padding:.9rem 1.1rem;background:var(--papel);border:1px solid var(--linea);
+       font-size:.92rem;min-width:0}
+.cifra b{font-family:var(--dato);font-variant-numeric:tabular-nums;color:var(--senal)}
+.nota{margin-top:1.1rem;font-size:.87rem;color:var(--apagado);border-top:1px dashed var(--linea);padding-top:.8rem}
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.9rem;margin-top:1.2rem}
+.galeria figure{margin:0;min-width:0}
+.galeria img{width:100%;max-width:100%;display:block;border:1px solid var(--linea);background:var(--papel)}
+.galeria figcaption{font-family:var(--dato);font-size:.67rem;letter-spacing:.11em;text-transform:uppercase;
+                    color:var(--apagado);margin-top:.45rem}
+
+.rej{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem}
+.serv{border:1px solid var(--linea);background:var(--ficha);padding:1.1rem;min-width:0}
+.serv h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
+.serv p{font-size:.92rem;color:var(--apagado);margin:0}
+
+.cont{display:grid;gap:.8rem;margin-top:1.4rem}
+.fila{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem;min-width:0}
+.val{font-family:var(--dato);font-size:.95rem;word-break:break-word;min-width:0}
+button{font-family:var(--dato);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;
+       background:transparent;color:var(--senal);border:1px solid var(--senal);
+       padding:.25rem .6rem;cursor:pointer;border-radius:0}
+button:hover{background:var(--senal);color:var(--ficha)}
+button:focus-visible{outline:2px solid var(--senal);outline-offset:2px}
+footer{padding-block:2rem 3rem;color:var(--apagado);font-size:.85rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+</head>
+<body>
+
+<div class="env">
+
+<header>
+  <div class="eti">Desarrollador full-stack &middot; Venezuela (GMT-4) &middot; Remoto</div>
+  <h1>Angel Guerrero</h1>
+  <div class="rol">Sistemas terminados para negocios, y automatizaci&oacute;n que mueve dinero</div>
+  <p class="tesis">Siete sistemas de gesti&oacute;n listos para instalar, una app de citas veterinarias con bot de
+     WhatsApp, bots que pagan y operan con dinero real, y un juego propio. Los une la misma idea: ante la duda no act&uacute;an, avisan
+     antes de gastar, y est&aacute;n construidos pensando en quien est&aacute; del otro lado.</p>
+  <div class="meta">
+    <span class="eti">TypeScript &middot; Python &middot; Rust</span>
+    <span class="eti">React &middot; Node &middot; PostgreSQL</span>
+    <span class="eti">Solana &middot; Playwright &middot; Docker</span>
+  </div>
+</header>
+
+<section>
+  <div class="enc"><h2>Proyectos</h2><div class="regla"></div><span class="eti">6 fichas</span></div>
+
+  <article class="ficha">
+    <h3>Siete sistemas de gesti&oacute;n para negocios peque&ntilde;os</h3>
+    <p class="resumen">Siete paquetes para seis tipos de negocio: barber&iacute;a (dos versiones), cl&iacute;nica,
+       escuela, distribuidora, hotel y restaurante.
+       Cada uno con su sitio p&uacute;blico donde el cliente reserva o consulta, y su panel privado
+       donde el negocio administra. Terminados y entregables.</p>
+    <div class="pila"><span>Node</span><span>Express</span><span>SQLite</span><span>EJS</span><span>bcrypt</span></div>
+
+    <div class="galeria">
+      <figure><img src="sistemas/barberia.png" alt="Sitio p&uacute;blico del sistema de barber&iacute;a, con reserva de citas y lista de servicios con precios en bol&iacute;vares"><figcaption>Barber&iacute;a</figcaption></figure>
+      <figure><img src="sistemas/clinica.png" alt="Sitio p&uacute;blico del sistema de cl&iacute;nica"><figcaption>Cl&iacute;nica</figcaption></figure>
+      <figure><img src="sistemas/escuela.png" alt="Sitio p&uacute;blico del sistema de escuela"><figcaption>Escuela</figcaption></figure>
+      <figure><img src="sistemas/distribuidora.png" alt="Sitio p&uacute;blico del sistema de distribuidora"><figcaption>Distribuidora</figcaption></figure>
+      <figure><img src="sistemas/hotel.png" alt="Sitio p&uacute;blico del sistema de hotel"><figcaption>Hotel</figcaption></figure>
+      <figure><img src="sistemas/restaurante.png" alt="Sitio p&uacute;blico del sistema de restaurante"><figcaption>Restaurante</figcaption></figure>
+    </div>
+
+    <ul class="reglas">
+      <li><span class="marca">Entrega</span><div><b>Se ejecuta con un doble clic.</b> Cada sistema va empaquetado con su propio runtime y un <code>INICIAR.cmd</code>. El negocio no instala nada, no configura un servidor y no contrata hosting.</div></li>
+      <li><span class="marca">Base</span><div>Sesiones, contrase&ntilde;as con bcrypt y SQLite en un solo archivo. Sin base de datos externa que mantener ni que pagar.</div></li>
+      <li><span class="marca">Base</span><div>Precios en bol&iacute;vares y textos en espa&ntilde;ol: pensados para el negocio peque&ntilde;o latinoamericano, no traducidos de una plantilla.</div></li>
+    </ul>
+
+    <div class="cifra">La decisi&oacute;n que los hace vendibles no es t&eacute;cnica: es que una barber&iacute;a
+      de barrio no va a configurar un servidor. Por eso el sistema se enciende como se enciende
+      cualquier otro programa del mostrador.</div>
+  </article>
+
+  <article class="ficha">
+    <h3>VetCitas &mdash; citas para cl&iacute;nicas veterinarias</h3>
+    <p class="resumen">El cliente agenda por WhatsApp, que es donde ya est&aacute;; el equipo trabaja
+       desde un panel web. Producto propio con licencia propietaria.</p>
+    <div class="pila"><span>Node 22</span><span>Express 5</span><span>SQLite</span><span>WhatsApp</span></div>
+
+    <ul class="reglas">
+      <li><span class="marca">Cliente</span><div><b>Bot de WhatsApp con men&uacute; por n&uacute;meros:</b> agendar, ver o cancelar una cita, y abrir un ticket de consulta, urgencia, resultados, pagos o reclamos. Sin instalar nada ni aprender nada.</div></li>
+      <li><span class="marca">Equipo</span><div><b>Panel con roles</b> de administrador y doctor: agenda del d&iacute;a por veterinario, citas marcadas como atendida, no asisti&oacute;, reprogramada o cancelada, fichas de clientes y mascotas, y horarios configurables.</div></li>
+      <li><span class="marca">Equipo</span><div><b>Tickets con conversaci&oacute;n</b> que se responden desde el panel y llegan directamente al WhatsApp del cliente.</div></li>
+      <li><span class="marca">Cuidado</span><div><b>Recordatorios autom&aacute;ticos</b> antes de cada cita, y un <b>simulador de WhatsApp</b> integrado para probar el flujo completo sin un tel&eacute;fono y sin molestar a nadie.</div></li>
+    </ul>
+  </article>
+
+  <article class="ficha">
+    <h3>WealthPlanters &mdash; juego de granja en el navegador</h3>
+    <p class="resumen">Un juego completo, en espa&ntilde;ol, que se juega desde el m&oacute;vil o el
+       escritorio sin instalar nada y sin cuenta hasta el nivel 5. En desarrollo activo y abierto
+       para probarlo.</p>
+    <div class="pila"><span>TypeScript</span><span>React</span><span>Next.js</span><span>Canvas WebGL</span><span>Isom&eacute;trico</span></div>
+
+    <ul class="reglas">
+      <li><span class="marca">Juego</span><div>Parcela de 12&times;12 con siete herramientas, estaciones que cambian solas, energ&iacute;a que se regenera, niveles y dos monedas. Tienda con mascotas, construcciones, maquinaria y decoraci&oacute;n, cocina, encargos y mercado entre jugadores.</div></li>
+      <li><span class="marca">Juego</span><div>36 logros, bit&aacute;cora de la granja y almac&eacute;n con l&iacute;mite real, para que las decisiones econ&oacute;micas importen.</div></li>
+      <li><span class="marca">Cuidado</span><div><b>Accesibilidad de verdad.</b> Cada control lleva su etiqueta descriptiva: un lector de pantalla anuncia &laquo;Regar la tierra seca&raquo;, no &laquo;bot&oacute;n&raquo;. Comprobado en el &aacute;rbol de accesibilidad.</div></li>
+      <li><span class="marca">Cuidado</span><div><b>Modo &laquo;sin efectos&raquo;.</b> Quien no quiera confeti, luces ni vibraci&oacute;n los apaga y ve solo el n&uacute;mero. Volumen de m&uacute;sica y de efectos por separado.</div></li>
+      <li><span class="marca">Cuidado</span><div><b>Sin pedir datos antes de jugar.</b> Se juega sin cuenta; el correo solo hace falta para llevarte la granja a otro dispositivo, y la partida vive en tu navegador hasta entonces.</div></li>
+    </ul>
+
+    <div class="cifra">Jugable ahora en
+      <b><a href="https://wealth-planters-t6h3.vercel.app/">wealth-planters-t6h3.vercel.app</a></b>.
+      Versi&oacute;n de prueba: las partidas pueden reiniciarse mientras se ajusta el juego.</div>
+  </article>
+
+  <article class="ficha">
+    <h3>Bot de pagos P2P &mdash; Binance P2P + Banesco</h3>
+    <p class="resumen">Detecta &oacute;rdenes de compra de USDT sin pagar, lee los datos del vendedor,
+       pide permiso por Telegram y paga en la web del banco. Es el proyecto donde m&aacute;s cuesta
+       equivocarse, as&iacute; que es el que m&aacute;s candados tiene.</p>
+    <div class="pila"><span>Python 3.14</span><span>Playwright</span><span>unittest</span><span>Telegram</span></div>
+
+    <ul class="reglas">
+      <li><span class="marca">Regla</span><div><b>Falla cerrado.</b> Ante cualquier duda, error o dato ausente: no paga y avisa.</div></li>
+      <li><span class="marca">Regla</span><div><b>Aprobaci&oacute;n humana.</b> Resumen y botones Aprobar/Rechazar por Telegram antes de cada transferencia.</div></li>
+      <li><span class="marca">Regla</span><div><b>Simulacro por defecto.</b> El adaptador del banco rellena y lee, pero no pulsa Confirmar.</div></li>
+      <li><span class="marca">Regla</span><div><b>Verifica el titular.</b> Solo confirma si el nombre que muestra el banco coincide con el del vendedor.</div></li>
+      <li><span class="marca">Regla</span><div><b>Escritura previa.</b> Antes de confirmar persiste <code>PAYING</code>. Si el proceso muere, la orden pasa a <code>UNKNOWN</code>, se avisa y nunca se reintenta sola.</div></li>
+      <li><span class="marca no">Nunca</span><div>Retirar cripto, liberar ventas, pagar sin aprobaci&oacute;n, pagar fuera de topes o repetir un pago de resultado desconocido.</div></li>
+    </ul>
+
+    <div class="cifra">Dinero siempre en <b>Decimal</b>, nunca <b>float</b>. Un solo pago a la vez con cerrojo,
+      y un bot&oacute;n de p&aacute;nico que se revisa en el instante previo a pulsar Confirmar. Los secretos viven
+      fuera del repositorio y los registros pasan por un redactor.</div>
+  </article>
+
+  <article class="ficha">
+    <h3>Bot de arbitraje triangular &mdash; Binance Spot</h3>
+    <p class="resumen">Busca ciclos de tres pares que, despu&eacute;s de comisiones, cierren en ganancia.
+       Nace del an&aacute;lisis de seis proyectos p&uacute;blicos. Lo m&aacute;s valioso que hace es decirte
+       cu&aacute;ndo <em>no</em> operar.</p>
+    <div class="pila"><span>Python</span><span>WebSocket</span><span>Docker</span><span>pytest</span></div>
+
+    <ul class="reglas">
+      <li><span class="marca">Regla</span><div><b>Modo papel por defecto.</b> Simula con honestidad antes de arriesgar un euro.</div></li>
+      <li><span class="marca">Regla</span><div><b>Simulaci&oacute;n con latencia real.</b> Cada orden se compara con el libro que ver&iacute;as tras RTT/2 m&aacute;s el retraso de datos. Si para entonces la liquidez ya no est&aacute;, la orden caduca.</div></li>
+      <li><span class="marca">Regla</span><div>Rutas descubiertas con un grafo, &oacute;rdenes LIMIT + FOK, cantidad limitada a lo que hay en el libro, <code>stepSize</code> y <code>minNotional</code> respetados.</div></li>
+    </ul>
+
+    <div class="cifra">El README abre advirtiendo que esto casi nunca es rentable para un particular:
+      el m&aacute;s sofisticado de los seis referentes, en C++ con kernel bypass y servidor a <b>0,5 ms</b> de
+      Binance, gan&oacute; <b>0,13 $</b> en <b>69 h</b>. Medido en la conexi&oacute;n del usuario: ping de
+      <b>260 ms</b> y datos con segundos de retraso. Prefiero un cliente que entienda eso antes de depositar.</div>
+  </article>
+
+  <article class="ficha">
+    <h3>Reconstrucci&oacute;n forense de una app React y servidor MMO</h3>
+    <p class="resumen">Recuperar un proyecto compilable a partir de los source maps publicados de
+       un build desplegado, documentar su arquitectura y levantar encima un servidor multijugador
+       autoritativo propio.</p>
+    <div class="pila"><span>TypeScript</span><span>Fastify 5</span><span>Socket.IO</span><span>Prisma</span><span>PostgreSQL</span><span>Vitest</span></div>
+
+    <ul class="reglas">
+      <li><span class="marca">Propio</span><div><b>Herramienta de recuperaci&oacute;n:</b> reconstruye TS/TSX, SCSS, JSON e im&aacute;genes desde los source maps y deja un proyecto que compila, con informe de procedencia archivo por archivo.</div></li>
+      <li><span class="marca">Propio</span><div><b>Servidor autoritativo:</b> API REST, zona en tiempo real y reglas de juego en un paquete compartido entre cliente y servidor. Migraciones verificadas contra PostgreSQL embebido.</div></li>
+      <li><span class="marca">Propio</span><div><b>Arn&eacute;s de QA:</b> pruebas E2E en Chrome headless con capturas, errores de consola, fallos de red y diferencia de p&iacute;xeles contra la referencia.</div></li>
+    </ul>
+
+    <p class="nota"><b>Atribuci&oacute;n.</b> La aplicaci&oacute;n reconstruida no es m&iacute;a: es Farmland,
+      un juego de terceros cuyos source maps estaban publicados en producci&oacute;n. La us&eacute; como objeto
+      de estudio. Lo que presento como trabajo propio es la herramienta de recuperaci&oacute;n, el servidor,
+      el paquete de reglas y el arn&eacute;s de pruebas. El c&oacute;digo recuperado no se redistribuye.</p>
+  </article>
+</section>
+
+<section>
+  <div class="enc"><h2>Servicios</h2><div class="regla"></div></div>
+  <div class="rej">
+    <div class="serv"><h3>Sistemas de gesti&oacute;n para tu negocio</h3>
+      <p>Reservas, citas, inventario o clientes, con sitio p&uacute;blico y panel de administraci&oacute;n. Se ejecuta en tu propia PC: sin hosting, sin cuotas mensuales.</p></div>
+    <div class="serv"><h3>Atenci&oacute;n por WhatsApp</h3>
+      <p>Bot con men&uacute; para agendar, consultar y abrir tickets, con recordatorios autom&aacute;ticos y panel para responder desde el equipo.</p></div>
+    <div class="serv"><h3>Bots de Telegram y automatizaci&oacute;n</h3>
+      <p>Comandos, alertas e integraci&oacute;n con APIs, con confirmaci&oacute;n humana antes de cualquier acci&oacute;n que cueste dinero o sea p&uacute;blica.</p></div>
+    <div class="serv"><h3>Auditor&iacute;a de seguridad web</h3>
+      <p>PHP, Laravel y Firebase: login, formularios, inyecci&oacute;n SQL, subida de archivos, permisos y reglas. Informe por severidad con el arreglo de cada hallazgo.</p></div>
+    <div class="serv"><h3>Solana en tu aplicaci&oacute;n</h3>
+      <p>Inicio de sesi&oacute;n con billetera verificado en servidor, NFT con Metaplex y comprobaci&oacute;n de pagos. Devnet primero, siempre.</p></div>
+    <div class="serv"><h3>Backend en tiempo real</h3>
+      <p>Node, Socket.IO, PostgreSQL y Prisma: API, estado compartido, migraciones y despliegue con pruebas.</p></div>
+    <div class="serv"><h3>Scraping y navegador automatizado</h3>
+      <p>Python y Playwright sobre Chrome real, para sitios que no tienen API o no la entregan completa.</p></div>
+    <div class="serv"><h3>Ingenier&iacute;a inversa</h3>
+      <p>Entender, documentar y reconstruir aplicaciones web sin c&oacute;digo fuente, con informe de procedencia.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="enc"><h2>C&oacute;mo trabajo</h2><div class="regla"></div></div>
+  <ul class="reglas" style="max-width:44rem">
+    <li><span class="marca">01</span><div>Entregas cortas: ense&ntilde;o algo funcionando cada dos o tres d&iacute;as, no desaparezco dos semanas.</div></li>
+    <li><span class="marca">02</span><div>Te digo lo que no conviene hacer. Si tu idea no va a funcionar, lo sabr&aacute;s antes de pagarme, no despu&eacute;s.</div></li>
+    <li><span class="marca">03</span><div>Pruebo lo que entrego. Cada proyecto de arriba lleva su suite de pruebas y su modo seguro.</div></li>
+    <li><span class="marca">04</span><div>El c&oacute;digo es tuyo, con documentaci&oacute;n en tu idioma para que puedas mantenerlo sin m&iacute;.</div></li>
+  </ul>
+</section>
+
+<section>
+  <div class="enc"><h2>Contacto</h2><div class="regla"></div></div>
+  <div class="cont">
+    <div class="fila"><span class="eti" style="min-width:7rem">Correo</span>
+      <span class="val" id="correo">angelguerrrwro@gmail.com</span>
+      <button type="button" data-copiar="correo">Copiar</button></div>
+    <div class="fila"><span class="eti" style="min-width:7rem">WhatsApp</span>
+      <span class="val" id="tel">+58 424 1278485</span>
+      <button type="button" data-copiar="tel">Copiar</button></div>
+    <div class="fila"><span class="eti" style="min-width:7rem">Ubicaci&oacute;n</span>
+      <span class="val">Santa Teresa del Tuy, Miranda &middot; GMT-4</span></div>
+    <div class="fila"><span class="eti" style="min-width:7rem">Idiomas</span>
+      <span class="val">Espa&ntilde;ol nativo &middot; Ingl&eacute;s intermedio</span></div>
+    <div class="fila"><span class="eti" style="min-width:7rem">GitHub</span>
+      <span class="val"><a href="https://github.com/angelguerrrwro-rgb">github.com/angelguerrrwro-rgb</a></span></div>
+    <div class="fila"><span class="eti" style="min-width:7rem">LinkedIn</span>
+      <span class="val"><a href="https://www.linkedin.com/in/angelguerrero-dev">linkedin.com/in/angelguerrero-dev</a></span></div>
+    <div class="fila"><span class="eti" style="min-width:7rem">Curr&iacute;culum</span>
+      <span class="val"><a href="cv.html">Espa&ntilde;ol</a> &middot; <a href="cv-en.html">English</a>
+      &mdash; se imprime a PDF con Ctrl+P</span></div>
+  </div>
+</section>
+
+<footer>Las cifras citadas provienen de la documentaci&oacute;n y los README de cada proyecto.</footer>
+
+</div>
+
+<script>
+document.querySelectorAll("[data-copiar]").forEach(function(b){
+  b.addEventListener("click", function(){
+    var el = document.getElementById(b.getAttribute("data-copiar"));
+    if(!el) return;
+    var texto = el.textContent.trim();
+    var original = b.textContent;
+    function hecho(){ b.textContent = "Copiado"; setTimeout(function(){ b.textContent = original; }, 1600); }
+    function seleccionar(){
+      try{
+        var r = document.createRange(); r.selectNodeContents(el);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      }catch(e){}
+    }
+    try{
+      navigator.clipboard.writeText(texto).then(hecho, seleccionar);
+    }catch(e){ seleccionar(); }
+  });
+});
+</script>
+
+</body>
+</html>

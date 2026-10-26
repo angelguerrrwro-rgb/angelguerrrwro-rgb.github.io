@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Angel Guerrero CV</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Segoe UI", Calibri, system-ui, sans-serif; color: #1b2430; background: #e9edf2; }
+  .hoja { width: 210mm; min-height: 297mm; margin: 0 auto; display: grid; grid-template-columns: 62mm 1fr; background: #fff; }
+  aside { background: #101b2d; color: #c6d2e2; padding: 14mm 8mm; }
+  main  { padding: 14mm 12mm 14mm 10mm; }
+  h1 { font-size: 27pt; font-weight: 700; color: #101b2d; line-height: 1.05; }
+  .rol { color: #1f74c4; font-size: 11.5pt; font-weight: 600; margin-top: 2mm; line-height: 1.35; }
+  main h2 { font-size: 10pt; letter-spacing: .13em; color: #101b2d; text-transform: uppercase;
+            border-bottom: 1.5px solid #1f74c4; padding-bottom: 1.5mm; margin: 7mm 0 3mm; }
+  aside h2 { font-size: 8.5pt; letter-spacing: .13em; color: #4ea3f0; text-transform: uppercase; margin: 7mm 0 2.5mm; }
+  aside h2:first-of-type { margin-top: 0; }
+  p, li { font-size: 10pt; line-height: 1.5; }
+  aside p, aside li { font-size: 8.8pt; line-height: 1.6; }
+  main ul { margin: 1.5mm 0 0 4.5mm; }
+  main li { margin-bottom: 1.6mm; }
+  .puesto { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; margin-top: 4mm; }
+  .puesto:first-of-type { margin-top: 0; }
+  .puesto b { font-size: 10.5pt; }
+  .fecha { color: #5a6b80; font-size: 9pt; white-space: nowrap; }
+  .emp { color: #1f74c4; font-size: 9.5pt; }
+  .chips { display: flex; flex-wrap: wrap; gap: 1.5mm; }
+  .chips span { background: #1d2c45; border: 1px solid #2d4057; padding: .9mm 2.2mm; border-radius: 2px; font-size: 8pt; color: #dce6f3; }
+  aside a { color: #8ec5fa; text-decoration: none; word-break: break-all; }
+  .falta { background: #fff3cd; border-left: 3px solid #d79a00; padding: 2mm 3mm; font-size: 9pt; color: #6b4e00; margin-top: 2mm; }
+  @media print { body { background: #fff; } .falta { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+                 aside { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+</style>
+</head>
+<body>
+<div class="hoja">
+
+  <aside>
+    <h2>Contact</h2>
+    <p>angelguerrrwro@gmail.com<br>
+       WhatsApp: +58 424 1278485<br>
+       Santa Teresa del Tuy, Miranda,<br>Venezuela (GMT-4)<br>
+       Available for remote work</p>
+
+    <h2>Links</h2>
+    <p>GitHub: <a href="https://github.com/angelguerrrwro-rgb">github.com/angelguerrrwro-rgb</a><br>
+       LinkedIn: <a href="https://linkedin.com/in/angelguerrero-dev">linkedin.com/in/angelguerrero-dev</a><br>
+       Portfolio: <a href="https://claude.ai/artifact/XRZ9baMhRBH68hejLb82yM">claude.ai/artifact/XRZ9baMhRBH68hejLb82yM</a><br>
+       Live game: <a href="https://wealth-planters-t6h3.vercel.app/">wealth-planters-t6h3.vercel.app</a></p>
+
+    <h2>Skills</h2>
+    <div class="chips">
+      <span>TypeScript</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>Express</span><span>SQLite</span><span>EJS</span>
+      <span>Python</span><span>PostgreSQL</span><span>Prisma</span><span>Socket.IO</span>
+      <span>Fastify</span><span>PHP</span><span>Laravel</span><span>Solana</span><span>Rust</span>
+      <span>Telegram bots</span><span>Playwright</span><span>Web scraping</span>
+      <span>Ingeniería inversa</span><span>Web security</span><span>Docker</span><span>Git</span>
+    </div>
+
+    <h2>Languages</h2>
+    <p>Español: nativo<br>Inglés: intermedio</p>
+  </aside>
+
+  <main>
+    <h1>Angel Guerrero</h1>
+    <div class="rol">Desarrollador full-stack TypeScript y Python · Tiempo real, ingeniería inversa y Solana</div>
+
+    <h2>Profile</h2>
+    <p>Eight years in technology: five as an IT technician while teaching myself to program, and the
+       last two as a full-time developer. I build complete web applications, real-time servers and
+       automation, from the idea through to production. I work well where there is no documentation: I reconstruct existing systems to
+       understand them, then build my own backend on top, with its database and its tests. I ship in
+       short increments and show working progress every few days.</p>
+
+    <h2>Experience</h2>
+
+    <div class="puesto"><b>Full-stack developer</b><span class="fecha">Jan 2024 – present</span></div>
+    <div class="emp">Independent · own products and client work</div>
+    <ul>
+      <li><b>Seven management systems for small businesses.</b> Barber shop, clinic, school,
+          wholesaler, hotel and restaurant, each with a public site and an admin panel. Node and
+          Express, sessions, bcrypt password hashing and SQLite. Packaged so the business can run
+          them on its own PC with a double click, with nothing to install.</li>
+      <li><b>VetCitas, appointment management for veterinary clinics.</b> A WhatsApp bot with a
+          numbered menu to book, check and open tickets; a staff panel with admin and vet roles,
+          ticket conversations answered straight back to the client; automatic reminders before each
+          appointment, and a WhatsApp simulator to test the whole flow without a phone.</li>
+      <li><b>Automation that moves real money.</b> A P2P payment bot over Binance P2P and online
+          banking, with human approval through Telegram, write-ahead payment state and a fail-closed
+          policy. Plus a triangular arbitrage bot that defaults to paper mode and whose simulation
+          subtracts real latency instead of assuming instant execution.</li>
+      <li><b>WealthPlanters, an isometric browser farming game.</b> My own product: a 12&times;12 plot,
+          seasons, a two-currency economy, shop, kitchen, 36 achievements and a player market. React
+          and Next.js over a WebGL canvas. Every control carries an accessibility label and it plays
+          without an account up to level 5.</li>
+      <li><b>Authoritative MMO server and code forensics.</b> Fastify 5, Socket.IO and Prisma over
+          PostgreSQL, with game rules in a package shared by client and server and tested with Vitest.
+          Plus a tool of my own that recovers a compilable project from the source maps of a published
+          build, with a file-by-file provenance report, and a QA harness in headless Chrome with pixel
+          diffing.</li>
+      <li><b>Solana and security reviews.</b> Sign in with Solana (SIWS) verified server side, NFTs
+          with Metaplex, and a Rust/Anchor program with automated tests. Audits of PHP, Laravel and
+          Firebase systems with a severity-rated report and fixes applied.</li>
+    </ul>
+
+    <div class="puesto"><b>IT technician and self-taught programming</b><span class="fecha">2018 &ndash; 2023</span></div>
+    <div class="emp">Independent</div>
+    <ul>
+      <li>Building, repairing and maintaining computers; installing operating systems and software;
+          diagnosing and fixing faults.</li>
+      <li>Alongside this, programming on my own, focused on <b>bots and automation</b>. I moved from
+          one-off scripts to programs with persistent state, error handling and tests &mdash; the direct
+          foundation of the payment and arbitrage bots I build today.</li>
+    </ul>
+
+    <h2>What I can do for your team</h2>
+    <ul>
+      <li>Web applications and dashboards with React, TypeScript and Node.js</li>
+      <li>Real-time backends with Socket.IO, PostgreSQL and Prisma, with tests and deployment</li>
+      <li>Telegram bots, scrapers and browser automation with Python and Playwright</li>
+      <li>Web application reverse engineering: understanding, documenting and rebuilding code with no sources</li>
+      <li>Solana wallet integration, NFTs and server-side payment verification</li>
+      <li>Security reviews of PHP, Laravel and Firebase sites, with report and fixes</li>
+    </ul>
+
+    <h2>Education</h2>
+    <div class="puesto"><b>Secondary education</b><span class="fecha">2014 &ndash; 2018</span></div>
+    <div class="emp">Francisco Tamayo</div>
+  </main>
+
+</div>
+</body>
+</html>

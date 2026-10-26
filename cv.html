@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>CV Angel Guerrero</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Segoe UI", Calibri, system-ui, sans-serif; color: #1b2430; background: #e9edf2; }
+  .hoja { width: 210mm; min-height: 297mm; margin: 0 auto; display: grid; grid-template-columns: 62mm 1fr; background: #fff; }
+  aside { background: #101b2d; color: #c6d2e2; padding: 14mm 8mm; }
+  main  { padding: 14mm 12mm 14mm 10mm; }
+  h1 { font-size: 27pt; font-weight: 700; color: #101b2d; line-height: 1.05; }
+  .rol { color: #1f74c4; font-size: 11.5pt; font-weight: 600; margin-top: 2mm; line-height: 1.35; }
+  main h2 { font-size: 10pt; letter-spacing: .13em; color: #101b2d; text-transform: uppercase;
+            border-bottom: 1.5px solid #1f74c4; padding-bottom: 1.5mm; margin: 7mm 0 3mm; }
+  aside h2 { font-size: 8.5pt; letter-spacing: .13em; color: #4ea3f0; text-transform: uppercase; margin: 7mm 0 2.5mm; }
+  aside h2:first-of-type { margin-top: 0; }
+  p, li { font-size: 10pt; line-height: 1.5; }
+  aside p, aside li { font-size: 8.8pt; line-height: 1.6; }
+  main ul { margin: 1.5mm 0 0 4.5mm; }
+  main li { margin-bottom: 1.6mm; }
+  .puesto { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; margin-top: 4mm; }
+  .puesto:first-of-type { margin-top: 0; }
+  .puesto b { font-size: 10.5pt; }
+  .fecha { color: #5a6b80; font-size: 9pt; white-space: nowrap; }
+  .emp { color: #1f74c4; font-size: 9.5pt; }
+  .chips { display: flex; flex-wrap: wrap; gap: 1.5mm; }
+  .chips span { background: #1d2c45; border: 1px solid #2d4057; padding: .9mm 2.2mm; border-radius: 2px; font-size: 8pt; color: #dce6f3; }
+  aside a { color: #8ec5fa; text-decoration: none; word-break: break-all; }
+  .falta { background: #fff3cd; border-left: 3px solid #d79a00; padding: 2mm 3mm; font-size: 9pt; color: #6b4e00; margin-top: 2mm; }
+  @media print { body { background: #fff; } .falta { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+                 aside { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+</style>
+</head>
+<body>
+<div class="hoja">
+
+  <aside>
+    <h2>Contacto</h2>
+    <p>angelguerrrwro@gmail.com<br>
+       WhatsApp: +58 424 1278485<br>
+       Santa Teresa del Tuy, Miranda,<br>Venezuela (GMT-4)<br>
+       Disponible para trabajo remoto</p>
+
+    <h2>Enlaces</h2>
+    <p>GitHub: <a href="https://github.com/angelguerrrwro-rgb">github.com/angelguerrrwro-rgb</a><br>
+       LinkedIn: <a href="https://linkedin.com/in/angelguerrero-dev">linkedin.com/in/angelguerrero-dev</a><br>
+       Portafolio: <a href="https://claude.ai/artifact/XRZ9baMhRBH68hejLb82yM">claude.ai/artifact/XRZ9baMhRBH68hejLb82yM</a><br>
+       Juego en vivo: <a href="https://wealth-planters-t6h3.vercel.app/">wealth-planters-t6h3.vercel.app</a></p>
+
+    <h2>Habilidades</h2>
+    <div class="chips">
+      <span>TypeScript</span><span>JavaScript</span><span>React</span><span>Node.js</span><span>Express</span><span>SQLite</span><span>EJS</span>
+      <span>Python</span><span>PostgreSQL</span><span>Prisma</span><span>Socket.IO</span>
+      <span>Fastify</span><span>PHP</span><span>Laravel</span><span>Solana</span><span>Rust</span>
+      <span>Bots de Telegram</span><span>Playwright</span><span>Web scraping</span>
+      <span>Ingeniería inversa</span><span>Seguridad web</span><span>Docker</span><span>Git</span>
+    </div>
+
+    <h2>Idiomas</h2>
+    <p>Español: nativo<br>Inglés: intermedio</p>
+  </aside>
+
+  <main>
+    <h1>Angel Guerrero</h1>
+    <div class="rol">Desarrollador full-stack TypeScript y Python · Tiempo real, ingeniería inversa y Solana</div>
+
+    <h2>Perfil</h2>
+    <p>Ocho años en tecnología: cinco como técnico informático mientras aprendía a programar por mi
+       cuenta, y los dos últimos como desarrollador a tiempo completo. Construyo aplicaciones web
+       completas, servidores en tiempo real y automatizaciones, desde la idea hasta producción. Me muevo bien donde no hay documentación: reconstruyo sistemas ajenos para
+       entenderlos, y encima levanto backend propio con su base de datos y sus pruebas. Trabajo por
+       entregas cortas y muestro avances cada pocos días.</p>
+
+    <h2>Experiencia</h2>
+
+    <div class="puesto"><b>Desarrollador full-stack</b><span class="fecha">Ene. 2024 – actualidad</span></div>
+    <div class="emp">Independiente · proyectos propios y por encargo</div>
+    <ul>
+      <li><b>Siete sistemas de gestión para negocios pequeños.</b> Barbería, clínica, escuela,
+          distribuidora, hotel y restaurante, cada uno con su sitio público y su panel de
+          administración. Node y Express, sesiones, contraseñas con bcrypt y SQLite. Empaquetados
+          para que el negocio los ejecute en su propia PC con un doble clic, sin instalar nada.</li>
+      <li><b>VetCitas, control de citas para clínicas veterinarias.</b> Bot de WhatsApp con menú
+          para agendar, consultar y abrir tickets; panel para el equipo con roles de administrador
+          y doctor, conversación de tickets y respuesta directa al cliente; recordatorios
+          automáticos antes de cada cita, y un simulador de WhatsApp para probarlo todo sin teléfono.</li>
+      <li><b>Automatización que mueve dinero real.</b> Bot de pagos P2P sobre Binance P2P y banca en
+          línea, con aprobación humana por Telegram, escritura previa del pago y política de fallar
+          cerrado. Y un bot de arbitraje triangular con modo papel por defecto, cuya simulación
+          descuenta la latencia real en vez de suponer ejecución instantánea.</li>
+      <li><b>WealthPlanters, juego de granja isom&eacute;trico en el navegador.</b> Producto propio,
+          en espa&ntilde;ol: parcela de 12&times;12, estaciones, econom&iacute;a con dos monedas, tienda,
+          cocina, 36 logros y mercado entre jugadores. React y Next.js sobre canvas WebGL. Cada
+          control lleva etiqueta de accesibilidad y se juega sin cuenta hasta el nivel 5.</li>
+      <li><b>Servidor MMO autoritativo y reconstrucción forense.</b> Fastify 5, Socket.IO y Prisma
+          sobre PostgreSQL, con las reglas de juego en un paquete compartido entre cliente y servidor
+          y pruebas en Vitest. Más una herramienta propia que recupera un proyecto compilable desde
+          los source maps de un build publicado, con informe de procedencia archivo por archivo, y un
+          arnés de QA en Chrome headless con diferencia de píxeles.</li>
+      <li><b>Solana y revisión de seguridad.</b> Inicio de sesión con billetera (SIWS) verificado en
+          servidor, NFT con Metaplex y un programa en Rust/Anchor con pruebas automáticas. Auditorías
+          de sistemas PHP, Laravel y Firebase con informe por severidad y arreglos aplicados.</li>
+    </ul>
+
+    <div class="puesto"><b>T&eacute;cnico inform&aacute;tico y programaci&oacute;n autodidacta</b><span class="fecha">2018 &ndash; 2023</span></div>
+    <div class="emp">Independiente</div>
+    <ul>
+      <li>Montaje, reparaci&oacute;n y mantenimiento de equipos; instalaci&oacute;n de sistemas operativos y
+          software; diagn&oacute;stico y resoluci&oacute;n de aver&iacute;as.</li>
+      <li>En paralelo, programaci&oacute;n por cuenta propia centrada en <b>bots y automatizaci&oacute;n</b>.
+          Pas&eacute; de scripts sueltos a programas con estado persistente, manejo de errores y pruebas: es
+          la base directa de los bots de pagos y arbitraje que construyo hoy.</li>
+    </ul>
+
+    <h2>Qué puedo hacer por tu empresa</h2>
+    <ul>
+      <li>Aplicaciones web y paneles con React, TypeScript y Node.js</li>
+      <li>Backends en tiempo real con Socket.IO, PostgreSQL y Prisma, con pruebas y despliegue</li>
+      <li>Bots de Telegram, scrapers y automatización de navegador con Python y Playwright</li>
+      <li>Ingeniería inversa de aplicaciones web: entender, documentar y reconstruir código sin fuentes</li>
+      <li>Integración de billeteras Solana, NFT y verificación de pagos en servidor</li>
+      <li>Revisión de seguridad de sitios PHP, Laravel y Firebase, con informe y arreglos</li>
+    </ul>
+
+    <h2>Estudios</h2>
+    <div class="puesto"><b>Bachillerato / Educación Media</b><span class="fecha">2014 – 2018</span></div>
+    <div class="emp">Francisco Tamayo</div>
+  </main>
+
+</div>
+</body>
+</html>
