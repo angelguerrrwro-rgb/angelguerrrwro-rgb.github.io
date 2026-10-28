@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reservas por internet para su negocio</title>
+<meta name="description" content="Sistema de reservas y gestion para barberias, clinicas, escuelas, hoteles, restaurantes y distribuidoras. Ya esta hecho: se adapta a su negocio y se entrega en 8 dias.">
+<link rel="canonical" href="https://angelguerrrwro-rgb.github.io/sistemas.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Reservas por internet para su negocio, en 8 dias">
+<meta property="og:description" content="Siete sistemas ya terminados. Se adapta el que mas se parezca a su negocio. Sin mensualidad obligatoria.">
+<meta property="og:url" content="https://angelguerrrwro-rgb.github.io/sistemas.html">
+<meta property="og:image" content="https://angelguerrrwro-rgb.github.io/sistemas/barberia.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%2314202a'/><text x='32' y='45' font-size='38' font-family='Arial,sans-serif' font-weight='700' fill='%23b35309' text-anchor='middle'>A</text></svg>">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=JetBrains+Mono:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+:root{
+  --papel:#f2f5f6; --ficha:#ffffff; --tinta:#14202a; --apagado:#5a6b79;
+  --senal:#b35309; --linea:#d8e0e5; --ok:#1d6b4f;
+  --display:"Chivo","Arial Narrow",Helvetica,sans-serif;
+  --cuerpo:"Source Sans 3",-apple-system,Segoe UI,sans-serif;
+  --dato:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --papel:#0e151b; --ficha:#161f27; --tinta:#e2eaf0; --apagado:#8ba0b1;
+  --senal:#ef9d4a; --linea:#243139; --ok:#4fbf92; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --papel:#0e151b; --ficha:#161f27; --tinta:#e2eaf0; --apagado:#8ba0b1;
+  --senal:#ef9d4a; --linea:#243139; --ok:#4fbf92; color-scheme:dark;}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--cuerpo);
+     font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.env{max-width:60rem;margin:0 auto;
+     padding-left:max(16px,env(safe-area-inset-left,0px));
+     padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+.eti{font-family:var(--dato);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--apagado)}
+
+header{padding-block:clamp(2.5rem,7vw,4.5rem) clamp(2rem,5vw,3rem);border-bottom:1px solid var(--linea)}
+h1{font-size:clamp(2.1rem,7vw,3.5rem);font-weight:900;letter-spacing:-.025em;margin-top:.6rem}
+.tesis{max-width:36rem;margin-top:1.3rem;font-size:clamp(1.05rem,2.6vw,1.22rem)}
+.tesis b{color:var(--senal)}
+
+section{padding-block:clamp(2.2rem,6vw,3.4rem);border-bottom:1px solid var(--linea)}
+.enc{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.6rem}
+.enc h2{font-size:clamp(1.3rem,4vw,1.75rem);font-weight:700;letter-spacing:-.015em}
+.enc .regla{flex:1;height:1px;background:var(--linea);min-width:0}
+
+.rejilla{display:grid;gap:1rem;grid-template-columns:1fr}
+@media(min-width:640px){.rejilla{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.rejilla{grid-template-columns:1fr 1fr 1fr}}
+.caso{background:var(--ficha);border:1px solid var(--linea);border-left:3px solid var(--senal);overflow:hidden}
+.caso img{display:block;width:100%;height:auto;border-bottom:1px solid var(--linea)}
+.caso .cuerpo{padding:1rem 1.1rem 1.2rem}
+.caso h3{font-size:1.1rem;font-weight:700}
+.caso p{margin:.4rem 0 0;color:var(--apagado);font-size:.95rem}
+
+.lista{list-style:none;padding:0;margin:0;display:grid;gap:.85rem}
+.lista li{display:flex;gap:.85rem;align-items:flex-start}
+.marca{font-family:var(--dato);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
+       color:var(--senal);border:1px solid var(--linea);padding:.2rem .45rem;white-space:nowrap;margin-top:.2rem}
+
+.precio{background:var(--ficha);border:1px solid var(--linea);border-left:3px solid var(--ok);
+        padding:clamp(1.1rem,3.5vw,1.8rem)}
+.precio .cifra{font-family:var(--display);font-size:clamp(2rem,6vw,2.8rem);font-weight:900;color:var(--ok);line-height:1}
+.precio .nota{color:var(--apagado);margin-top:.5rem}
+.opciones{display:grid;gap:1rem;margin-top:1.4rem;grid-template-columns:1fr}
+@media(min-width:720px){.opciones{grid-template-columns:1fr 1fr}}
+.opcion{border:1px solid var(--linea);padding:1rem 1.1rem;background:var(--papel)}
+.opcion h3{font-size:1rem;font-weight:700;margin-bottom:.35rem}
+.opcion p{margin:0;color:var(--apagado);font-size:.95rem}
+
+details{border:1px solid var(--linea);background:var(--ficha);margin-bottom:.7rem}
+summary{cursor:pointer;padding:.9rem 1.1rem;font-weight:600;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+ ";color:var(--senal);font-family:var(--dato)}
+details[open] summary::before{content:"\2212 "}
+details p{margin:0;padding:0 1.1rem 1.1rem;color:var(--apagado)}
+
+.cta{display:inline-block;background:var(--senal);color:#fff;text-decoration:none;
+     font-family:var(--display);font-weight:700;font-size:1.05rem;
+     padding:.9rem 1.6rem;border:0;margin-top:.4rem}
+.cta:hover{filter:brightness(1.08)}
+.contacto{display:grid;gap:.6rem;margin-top:1.2rem}
+.contacto .fila{display:flex;gap:.9rem;align-items:baseline;flex-wrap:wrap}
+.contacto .val{font-family:var(--dato);font-size:.95rem}
+a{color:var(--senal)}
+footer{padding-block:2rem 3rem;color:var(--apagado);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="env">
+
+<header>
+  <span class="eti">Angel Guerrero &middot; Santa Teresa del Tuy, Miranda</span>
+  <h1>Que sus clientes reserven solos, sin llamar a nadie</h1>
+  <p class="tesis">No se lo voy a construir desde cero. <b>Ya est&aacute; hecho.</b> Tengo siete
+  sistemas terminados y funcionando &mdash; barber&iacute;a, cl&iacute;nica, escuela, hotel,
+  restaurante y distribuidora. Se adapta el que m&aacute;s se parezca a su negocio, con su
+  nombre, sus servicios y sus horarios. <b>Entrega en 8 d&iacute;as.</b></p>
+  <a class="cta" href="https://wa.me/584241278485?text=Hola%20Angel%2C%20vi%20su%20p%C3%A1gina%20de%20sistemas%20de%20reservas%20y%20quiero%20saber%20m%C3%A1s%20para%20mi%20negocio.">Escribirme por WhatsApp</a>
+</header>
+
+<section>
+  <div class="enc"><h2>Lo que ya est&aacute; construido</h2><div class="regla"></div></div>
+  <div class="rejilla">
+    <div class="caso"><img src="sistemas/barberia.png" alt="Pantalla del sistema de barberia" loading="lazy">
+      <div class="cuerpo"><h3>Barber&iacute;a</h3>
+      <p>El cliente escoge servicio, barbero, d&iacute;a y hora. Usted ve la agenda del d&iacute;a.</p></div></div>
+    <div class="caso"><img src="sistemas/clinica.png" alt="Pantalla del sistema de clinica" loading="lazy">
+      <div class="cuerpo"><h3>Cl&iacute;nica o consultorio</h3>
+      <p>Citas por especialidad, historial del paciente y recordatorios.</p></div></div>
+    <div class="caso"><img src="sistemas/escuela.png" alt="Pantalla del sistema de escuela" loading="lazy">
+      <div class="cuerpo"><h3>Escuela o academia</h3>
+      <p>Inscripciones, secciones, representantes y control de pagos.</p></div></div>
+    <div class="caso"><img src="sistemas/hotel.png" alt="Pantalla del sistema de hotel" loading="lazy">
+      <div class="cuerpo"><h3>Hotel o posada</h3>
+      <p>Disponibilidad por habitaci&oacute;n, reservas y entradas y salidas.</p></div></div>
+    <div class="caso"><img src="sistemas/restaurante.png" alt="Pantalla del sistema de restaurante" loading="lazy">
+      <div class="cuerpo"><h3>Restaurante</h3>
+      <p>Mesas, pedidos y men&uacute; que usted cambia sin llamar a nadie.</p></div></div>
+    <div class="caso"><img src="sistemas/distribuidora.png" alt="Pantalla del sistema de distribuidora" loading="lazy">
+      <div class="cuerpo"><h3>Distribuidora</h3>
+      <p>Inventario, pedidos de clientes y control de lo que entra y sale.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="enc"><h2>Qu&eacute; recibe</h2><div class="regla"></div></div>
+  <ul class="lista">
+    <li><span class="marca">P&uacute;blico</span><div><b>Una p&aacute;gina donde su cliente reserva</b> desde el tel&eacute;fono, a cualquier hora, sin instalar nada y sin tener que escribirle a usted.</div></li>
+    <li><span class="marca">Privado</span><div><b>Un panel solo suyo</b> con la agenda del d&iacute;a, sus clientes, su historial y sus n&uacute;meros. Entra con su clave desde donde est&eacute;.</div></li>
+    <li><span class="marca">Suyo</span><div><b>Usted cambia precios, horarios y servicios</b> cuando quiera. No tiene que pedirme permiso ni pagarme por cada cambio.</div></li>
+    <li><span class="marca">Entrega</span><div><b>El programa es suyo</b>, con su manual de instalaci&oacute;n. Si ma&ntilde;ana no quiere trabajar conmigo, se queda con todo igual.</div></li>
+    <li><span class="marca">Prueba</span><div><b>A los 3 d&iacute;as le muestro algo funcionando</b> con los datos de su negocio. Si no le gusta c&oacute;mo va, lo paramos ah&iacute;.</div></li>
+  </ul>
+</section>
+
+<section>
+  <div class="enc"><h2>Cu&aacute;nto cuesta</h2><div class="regla"></div></div>
+  <div class="precio">
+    <span class="eti">Adaptaci&oacute;n completa a su negocio</span>
+    <div class="cifra">Desde 150&nbsp;$</div>
+    <p class="nota">Pago &uacute;nico. La mitad al empezar y la mitad cuando lo vea funcionando.
+    El precio final depende de cu&aacute;nto haya que cambiar; se lo digo antes de empezar,
+    por escrito, y no se mueve.</p>
+    <div class="opciones">
+      <div class="opcion"><h3>En su propio equipo</h3>
+        <p>Corre en la computadora del negocio. <b>Sin mensualidad</b>, sin depender de internet
+        para trabajar. Ideal si lo que quiere es ordenar la operaci&oacute;n por dentro.</p></div>
+      <div class="opcion"><h3>En internet</h3>
+        <p>Para que sus clientes reserven desde cualquier lado. Lleva un alojamiento aparte,
+        que ronda los <b>5 $ al mes</b> y se paga directo al proveedor, no a m&iacute;.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="enc"><h2>Lo que suelen preguntarme</h2><div class="regla"></div></div>
+  <details><summary>&iquest;Y si mi negocio no es ninguno de esos seis?</summary>
+    <p>Casi todos los negocios de atenci&oacute;n funcionan igual por dentro: alguien pide un
+    turno, usted lo acomoda en una agenda y lleva la cuenta. Escr&iacute;bame qu&eacute; hace su
+    negocio y le digo de una vez si le sirve alguno o si hay que hacer m&aacute;s trabajo.</p></details>
+  <details><summary>No s&eacute; nada de computadoras. &iquest;Voy a poder usarlo?</summary>
+    <p>Est&aacute; hecho para eso. El panel se maneja como WhatsApp: lista de cosas, usted toca
+    la que quiere. Le entrego el manual y le explico por videollamada las veces que haga falta
+    durante el primer mes, sin cobrarle aparte.</p></details>
+  <details><summary>&iquest;Qu&eacute; pasa si se da&ntilde;a o si quiero un cambio despu&eacute;s?</summary>
+    <p>Los errores que sean culpa del sistema los arreglo gratis durante 30 d&iacute;as. Pasado
+    ese tiempo, o si quiere algo nuevo, le paso el presupuesto antes de tocar nada.</p></details>
+  <details><summary>&iquest;Me va a cobrar todos los meses?</summary>
+    <p>No. Es un pago &uacute;nico. Si decide ponerlo en internet, el alojamiento se lo paga
+    usted al proveedor, no a m&iacute;. Si despu&eacute;s quiere que yo le d&eacute; soporte mensual,
+    eso se conversa aparte y es opcional.</p></details>
+  <details><summary>&iquest;Puedo ver uno funcionando antes de pagar?</summary>
+    <p>S&iacute;. Le hago una demostraci&oacute;n en vivo, con el sistema corriendo, antes de que
+    usted ponga un bol&iacute;var.</p></details>
+</section>
+
+<section>
+  <div class="enc"><h2>Hablemos</h2><div class="regla"></div></div>
+  <p>Escr&iacute;bame qu&eacute; negocio tiene y qu&eacute; es lo que m&aacute;s tiempo le quita hoy.
+  Le respondo el mismo d&iacute;a y le digo con franqueza si esto le sirve o no.</p>
+  <a class="cta" href="https://wa.me/584241278485?text=Hola%20Angel%2C%20vi%20su%20p%C3%A1gina%20de%20sistemas%20de%20reservas%20y%20quiero%20saber%20m%C3%A1s%20para%20mi%20negocio.">Escribirme por WhatsApp</a>
+  <div class="contacto">
+    <div class="fila"><span class="eti" style="min-width:7rem">WhatsApp</span><span class="val">+58 424 1278485</span></div>
+    <div class="fila"><span class="eti" style="min-width:7rem">Correo</span><span class="val">angelguerrrwro@gmail.com</span></div>
+    <div class="fila"><span class="eti" style="min-width:7rem">Zona</span><span class="val">Valles del Tuy y Caracas &middot; tambi&eacute;n a distancia</span></div>
+    <div class="fila"><span class="eti" style="min-width:7rem">M&aacute;s trabajo</span><span class="val"><a href="./">Ver el portafolio completo</a></span></div>
+  </div>
+</section>
+
+<footer>Las pantallas que aparecen en esta p&aacute;gina son de los sistemas reales, no son ilustraciones.</footer>
+
+</div>
+</body>
+</html>
