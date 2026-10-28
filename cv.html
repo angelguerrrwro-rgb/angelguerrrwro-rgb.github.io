@@ -20,6 +20,9 @@
   aside p, aside li { font-size: 8.8pt; line-height: 1.6; }
   main ul { margin: 1.5mm 0 0 4.5mm; }
   main li { margin-bottom: 1.6mm; }
+  .cita { border-left: 2.5pt solid #4ea3f0; padding: 1mm 0 1mm 3.5mm; margin-top: 2mm; }
+  .cita p { margin: 0; font-style: italic; }
+  .cita .quien { font-style: normal; font-size: 8.2pt; color: #5a6b79; margin-top: 1mm; display: block; }
   .puesto { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; margin-top: 4mm; }
   .puesto:first-of-type { margin-top: 0; }
   .puesto b { font-size: 10.5pt; }
@@ -76,16 +79,27 @@
     <h2>Experiencia</h2>
 
     <div class="puesto"><b>Desarrollador full-stack</b><span class="fecha">Ene. 2024 – actualidad</span></div>
-    <div class="emp">Independiente · proyectos propios y por encargo</div>
+    <div class="emp">Independiente · trabajo por encargo y productos propios</div>
     <ul>
       <li><b>Siete sistemas de gestión para negocios pequeños.</b> Encargados por un cliente y entregados. Siete paquetes para seis tipos de
           negocio — barbería (dos versiones), clínica, escuela, distribuidora, hotel y
           restaurante — cada uno con su sitio público y su panel de administración. Node y Express, sesiones, contraseñas con bcrypt y SQLite. Empaquetados
           para que el negocio los ejecute en su propia PC con un doble clic, sin instalar nada.</li>
-      <li><b>VetCitas, control de citas para clínicas veterinarias.</b> Bot de WhatsApp con menú
+      <li><b>VetCitas, control de citas para clínicas veterinarias.</b> Proyecto de cliente. Bot de WhatsApp con menú
           para agendar, consultar y abrir tickets; panel para el equipo con roles de administrador
           y doctor, conversación de tickets y respuesta directa al cliente; recordatorios
           automáticos antes de cada cita, y un simulador de WhatsApp para probarlo todo sin teléfono.</li>
+      <li><b>Monitor de se&ntilde;ales de Discord con operaci&oacute;n autom&aacute;tica de futuros.</b> Para el mismo
+          cliente de los sistemas de gestión — cuatro entregas entre junio y julio de 2026,
+          cada una encargada después de la anterior. Entregado y en uso. Dos procesos de Python independientes leen una sesi&oacute;n
+          real de Discord por el protocolo DevTools &mdash; sin cuenta de bot ni tokens de la API de
+          Discord &mdash;, reenv&iacute;an a Telegram los mensajes que coinciden y convierten las se&ntilde;ales
+          v&aacute;lidas en posiciones reales en MEXC Futuros: tres sub&oacute;rdenes, cada una con su toma de
+          ganancia y un stop loss compartido. Un panel limita apalancamiento y tama&ntilde;o contra el
+          balance y el margen reales, y rechaza cualquier ajuste por encima del saldo de la cuenta;
+          las se&ntilde;ales que llegan a menos de 30 minutos de una noticia de alto impacto se descartan,
+          y hay modo de simulaci&oacute;n. Validado con una prueba en vivo de 60 minutos: 73 escenarios,
+          cero hallazgos, con el env&iacute;o de &oacute;rdenes simulado para no mover dinero real.</li>
       <li><b>Automatización que mueve dinero real.</b> Bot de pagos P2P sobre Binance P2P y banca en
           línea, con aprobación humana por Telegram, escritura previa del pago y política de fallar
           cerrado. Y un bot de arbitraje triangular con modo papel por defecto, cuya simulación
@@ -123,6 +137,16 @@
       <li>Integración de billeteras Solana, NFT y verificación de pagos en servidor</li>
       <li>Revisión de seguridad de sitios PHP, Laravel y Firebase, con informe y arreglos</li>
     </ul>
+
+    <h2>Referencias de clientes</h2>
+    <div class="cita">
+      <p>«Volví a contratarlo cada vez porque entrega las cosas funcionando, con su manual, y las prueba antes de dármelas.»</p>
+      <span class="quien">Mayto — diez encargos entre junio y octubre de 2026: siete sistemas y tres bots</span>
+    </div>
+    <div class="cita">
+      <p>«Lo entregó funcionando, nos explicó cómo usarlo, y sigue atendiendo los cambios que le pedimos.»</p>
+      <span class="quien">Clínica veterinaria en Miranda — usa VetCitas a diario</span>
+    </div>
 
     <h2>Estudios</h2>
     <div class="puesto"><b>Bachillerato / Educación Media</b><span class="fecha">2014 – 2018</span></div>

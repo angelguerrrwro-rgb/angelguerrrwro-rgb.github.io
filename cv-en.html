@@ -20,6 +20,9 @@
   aside p, aside li { font-size: 8.8pt; line-height: 1.6; }
   main ul { margin: 1.5mm 0 0 4.5mm; }
   main li { margin-bottom: 1.6mm; }
+  .cita { border-left: 2.5pt solid #4ea3f0; padding: 2mm 0 2mm 4mm; margin-top: 3mm; }
+  .cita p { margin: 0; font-style: italic; }
+  .cita .quien { font-style: normal; font-size: 8.5pt; color: #5a6b79; margin-top: 1.5mm; display: block; }
   .puesto { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; margin-top: 4mm; }
   .puesto:first-of-type { margin-top: 0; }
   .puesto b { font-size: 10.5pt; }
@@ -76,17 +79,27 @@
     <h2>Experience</h2>
 
     <div class="puesto"><b>Full-stack developer</b><span class="fecha">Jan 2024 – present</span></div>
-    <div class="emp">Independent · own products and client work</div>
+    <div class="emp">Independent · client work and own products</div>
     <ul>
-      <li><b>Seven management systems for small businesses.</b> Seven packages across six business
+      <li><b>Seven management systems for small businesses.</b> Commissioned by a client and delivered. Seven packages across six business
           types — barber shop (two versions), clinic, school, wholesaler, hotel and restaurant
           — each with a public site and an admin panel. Node and
           Express, sessions, bcrypt password hashing and SQLite. Packaged so the business can run
           them on its own PC with a double click, with nothing to install.</li>
-      <li><b>VetCitas, appointment management for veterinary clinics.</b> A WhatsApp bot with a
+      <li><b>VetCitas, appointment management for veterinary clinics.</b> Client project. A WhatsApp bot with a
           numbered menu to book, check and open tickets; a staff panel with admin and vet roles,
           ticket conversations answered straight back to the client; automatic reminders before each
           appointment, and a WhatsApp simulator to test the whole flow without a phone.</li>
+      <li><b>Discord signal monitor with automated futures trading.</b> For the same client as the
+          management systems above — four deliveries between June and July 2026, each one
+          commissioned after the last. Delivered and in use. Two independent Python processes read a live Discord session through the
+          DevTools protocol &mdash; no bot account and no Discord API tokens &mdash; relay matched
+          messages to Telegram, and turn valid signals into real MEXC Futures positions: three
+          sub-orders, each with its own take-profit and a shared stop-loss. A control panel caps
+          leverage and size against live balance and margin and refuses any setting above the
+          account balance; signals arriving within 30 minutes of high-impact news are skipped, and
+          there is a dry-run mode. Validated with a 60-minute live test: 73 scenarios, zero
+          findings, order sending mocked so no real money moved.</li>
       <li><b>Automation that moves real money.</b> A P2P payment bot over Binance P2P and online
           banking, with human approval through Telegram, write-ahead payment state and a fail-closed
           policy. Plus a triangular arbitrage bot that defaults to paper mode and whose simulation
@@ -124,6 +137,17 @@
       <li>Solana wallet integration, NFTs and server-side payment verification</li>
       <li>Security reviews of PHP, Laravel and Firebase sites, with report and fixes</li>
     </ul>
+
+    <h2>Client references</h2>
+    <div class="cita">
+      <p>&ldquo;I hired him again every time because he delivers things working, with a manual, and tests
+         them before handing them over. He does what he says and answers when I write.&rdquo;</p>
+      <span class="quien">Mayto &mdash; ten commissions between June and October 2026: seven management systems and three bots</span>
+    </div>
+    <div class="cita">
+      <p>&ldquo;He delivered it working, explained how to use it, and still handles the changes we ask for.&rdquo;</p>
+      <span class="quien">Veterinary clinic in Miranda &mdash; uses VetCitas daily</span>
+    </div>
 
     <h2>Education</h2>
     <div class="puesto"><b>Secondary education</b><span class="fecha">2014 &ndash; 2018</span></div>

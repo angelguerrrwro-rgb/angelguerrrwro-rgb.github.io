@@ -63,6 +63,12 @@ section{padding-block:clamp(2.2rem,6vw,3.4rem);border-bottom:1px solid var(--lin
 .marca{font-family:var(--dato);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
        color:var(--senal);border:1px solid var(--linea);padding:.2rem .45rem;white-space:nowrap;margin-top:.2rem}
 
+.cita{background:var(--ficha);border:1px solid var(--linea);border-left:3px solid var(--ok);
+      padding:clamp(1.1rem,3.5vw,1.6rem);margin:0 0 1.1rem}
+.cita:last-child{margin-bottom:0}
+.cita p{margin:0;font-size:clamp(1rem,2.5vw,1.08rem)}
+.cita footer{padding:0;margin-top:.9rem;display:flex;flex-wrap:wrap;gap:.3rem .8rem;align-items:baseline;min-width:0}
+.cita .quien{font-family:var(--display);font-weight:700;color:var(--tinta);font-size:.95rem}
 .precio{background:var(--ficha);border:1px solid var(--linea);border-left:3px solid var(--ok);
         padding:clamp(1.1rem,3.5vw,1.8rem)}
 .precio .cifra{font-family:var(--display);font-size:clamp(2rem,6vw,2.8rem);font-weight:900;color:var(--ok);line-height:1}
@@ -138,6 +144,29 @@ footer{padding-block:2rem 3rem;color:var(--apagado);font-size:.9rem}
     <li><span class="marca">Entrega</span><div><b>El programa es suyo</b>, con su manual de instalaci&oacute;n. Si ma&ntilde;ana no quiere trabajar conmigo, se queda con todo igual.</div></li>
     <li><span class="marca">Prueba</span><div><b>A los 3 d&iacute;as le muestro algo funcionando</b> con los datos de su negocio. Si no le gusta c&oacute;mo va, lo paramos ah&iacute;.</div></li>
   </ul>
+</section>
+
+<section>
+  <div class="enc"><h2>Qui&eacute;n lo est&aacute; usando ya</h2><div class="regla"></div></div>
+
+  <blockquote class="cita">
+    <p>&laquo;Angel nos hizo el sistema de citas de la cl&iacute;nica: un bot de WhatsApp donde el cliente agenda
+       solo y un panel donde nosotros vemos la agenda del d&iacute;a y manejamos los casos. Lo entreg&oacute;
+       funcionando, nos explic&oacute; c&oacute;mo usarlo, y sigue atendiendo los cambios que le pedimos.&raquo;</p>
+    <footer>
+      <span class="quien">Cl&iacute;nica veterinaria en Miranda</span>
+      <span class="eti">Lo usa todos los d&iacute;as</span>
+    </footer>
+  </blockquote>
+
+  <blockquote class="cita">
+    <p>&laquo;Volv&iacute; a contratarlo cada vez porque entrega las cosas funcionando, con su manual, y las
+       prueba antes de d&aacute;rmelas. Cumple lo que dice y responde cuando le escribo.&raquo;</p>
+    <footer>
+      <span class="quien">Mayto</span>
+      <span class="eti">Me encarg&oacute; los siete sistemas, uno tras otro</span>
+    </footer>
+  </blockquote>
 </section>
 
 <section>

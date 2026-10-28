@@ -74,6 +74,12 @@ section{padding-block:clamp(2.2rem,6vw,3.4rem);border-bottom:1px solid var(--lin
 .galeria figcaption{font-family:var(--dato);font-size:.67rem;letter-spacing:.11em;text-transform:uppercase;
                     color:var(--apagado);margin-top:.45rem}
 
+.cita{background:var(--ficha);border:1px solid var(--linea);border-left:3px solid var(--ok);
+      padding:clamp(1.1rem,3.5vw,1.6rem);margin:0 0 1.1rem}
+.cita:last-child{margin-bottom:0}
+.cita p{margin:0;font-size:clamp(1rem,2.5vw,1.08rem)}
+.cita footer{padding:0;margin-top:.9rem;display:flex;flex-wrap:wrap;gap:.3rem .8rem;align-items:baseline;min-width:0}
+.cita .quien{font-family:var(--display);font-weight:700;color:var(--tinta);font-size:.95rem}
 .rej{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem}
 .serv{border:1px solid var(--linea);background:var(--ficha);padding:1.1rem;min-width:0}
 .serv h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
@@ -233,6 +239,35 @@ footer{padding-block:2rem 3rem;color:var(--apagado);font-size:.85rem}
       de estudio. Lo que presento como trabajo propio es la herramienta de recuperaci&oacute;n, el servidor,
       el paquete de reglas y el arn&eacute;s de pruebas. El c&oacute;digo recuperado no se redistribuye.</p>
   </article>
+</section>
+
+<section>
+  <div class="enc"><h2>Lo que dicen quienes me contrataron</h2><div class="regla"></div><span class="eti">2 clientes</span></div>
+
+  <blockquote class="cita">
+    <p>&laquo;Angel me ha hecho varios trabajos desde mediados de este a&ntilde;o: siete sistemas de gesti&oacute;n
+       para distintos tipos de negocio y tres bots &mdash; uno que vigila canales de Discord y me avisa por
+       Telegram, y otro que convierte se&ntilde;ales en operaciones autom&aacute;ticas con sus l&iacute;mites de
+       riesgo. Volv&iacute; a contratarlo cada vez porque entrega las cosas funcionando, con su manual, y las
+       prueba antes de d&aacute;rmelas. Cumple lo que dice y responde cuando le escribo.&raquo;</p>
+    <footer>
+      <span class="quien">Mayto</span>
+      <span class="eti">10 encargos &middot; junio&ndash;octubre de 2026</span>
+    </footer>
+  </blockquote>
+
+  <blockquote class="cita">
+    <p>&laquo;Angel nos hizo el sistema de citas de la cl&iacute;nica: un bot de WhatsApp donde el cliente agenda
+       solo y un panel donde nosotros vemos la agenda del d&iacute;a y manejamos los casos. Lo entreg&oacute;
+       funcionando, nos explic&oacute; c&oacute;mo usarlo, y sigue atendiendo los cambios que le pedimos.&raquo;</p>
+    <footer>
+      <span class="quien">Cl&iacute;nica veterinaria en Miranda</span>
+      <span class="eti">VetCitas &middot; entregado y en uso</span>
+    </footer>
+  </blockquote>
+
+  <p class="nota">Dos clientes distintos, los dos con el trabajo entregado y en uso. Si quiere hablar con
+     alguno antes de contratarme, p&iacute;damelo y le paso el contacto con su permiso.</p>
 </section>
 
 <section>
